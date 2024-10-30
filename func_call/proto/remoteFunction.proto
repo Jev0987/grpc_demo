@@ -1,0 +1,44 @@
+/*
+ * @Descripttion: 
+ * @Author: jev
+ * @version: 
+ * @Date: 2024-10-30
+ * @LastEditors: jev
+ * @LastEditTime: 2024-10-30
+ */
+syntax = "proto3";
+
+package func_call;
+
+service RemoteFunction {
+    
+    // 两个数字相加
+    rpc addTwoNum (Numbers) returns (ans) {}
+
+    // 两个数字相加，返回流
+    rpc plusTwoNum (Numbers) returns (stream ans) {}
+
+    // 接受流数据，返回结果
+    rpc plusTwoNum2 (stream Numbers) returns (SquareTwoNum) {}
+
+    // 双向流
+    rpc plusTwoNum3 (stream Numbers) returns (stream SquareTwoNum) {}
+}
+
+// 普通的数字
+message Numbers {
+    int32 num1 = 2;
+    int32 num2 = 3;
+    int32 optTimes = 1;  // 操作次数
+}
+
+// 结果
+message ans {
+    int32 result = 1;
+}
+
+// 数字进行平方
+message SquareTwoNum {
+    int32 num1 = 1;
+    int32 num2 = 2;
+}
