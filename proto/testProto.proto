@@ -1,0 +1,23 @@
+/*
+ * @Descripttion: 
+ * @Author: jev
+ * @version: 测试proto环境
+ * @Date: 2024-10-29
+ * @LastEditors: jev
+ * @LastEditTime: 2024-10-29
+ */
+syntax = "proto3";
+
+package testProto;
+
+service TestService {
+    rpc Test (TestRequest) returns (TestResponse) {}
+}
+
+message TestRequest {
+    string name = 1;
+}
+
+message TestResponse {
+    string message = 1;
+}

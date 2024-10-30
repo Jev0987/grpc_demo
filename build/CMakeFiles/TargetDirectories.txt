@@ -1,0 +1,5 @@
+D:/code/demo/build/CMakeFiles/tp_grpc_proto.dir
+D:/code/demo/build/CMakeFiles/test_proto_client.dir
+D:/code/demo/build/CMakeFiles/test_proto_server.dir
+D:/code/demo/build/CMakeFiles/edit_cache.dir
+D:/code/demo/build/CMakeFiles/rebuild_cache.dir
