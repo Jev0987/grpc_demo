@@ -24,7 +24,7 @@ namespace func_call {
 
 inline constexpr ans::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : result_{0},
+      : result_{::int64_t{0}},
         _cached_size_{0} {}
 
 template <typename>
@@ -43,8 +43,8 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr SquareTwoNum::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : num1_{0},
-        num2_{0},
+      : num1_{::int64_t{0}},
+        num2_{::int64_t{0}},
         _cached_size_{0} {}
 
 template <typename>
@@ -63,9 +63,9 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 
 inline constexpr Numbers::Impl_::Impl_(
     ::_pbi::ConstantInitialized) noexcept
-      : opttimes_{0},
-        num1_{0},
-        num2_{0},
+      : opttimes_{::int64_t{0}},
+        num1_{::int64_t{0}},
+        num2_{::int64_t{0}},
         _cached_size_{0} {}
 
 template <typename>
@@ -135,9 +135,9 @@ static const ::_pb::Message* const file_default_instances[] = {
 };
 const char descriptor_table_protodef_remoteFunction_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
     "\n\024remoteFunction.proto\022\tfunc_call\"7\n\007Num"
-    "bers\022\014\n\004num1\030\002 \001(\005\022\014\n\004num2\030\003 \001(\005\022\020\n\010optT"
-    "imes\030\001 \001(\005\"\025\n\003ans\022\016\n\006result\030\001 \001(\005\"*\n\014Squ"
-    "areTwoNum\022\014\n\004num1\030\001 \001(\005\022\014\n\004num2\030\002 \001(\0052\373\001"
+    "bers\022\014\n\004num1\030\002 \001(\003\022\014\n\004num2\030\003 \001(\003\022\020\n\010optT"
+    "imes\030\001 \001(\003\"\025\n\003ans\022\016\n\006result\030\001 \001(\003\"*\n\014Squ"
+    "areTwoNum\022\014\n\004num1\030\001 \001(\003\022\014\n\004num2\030\002 \001(\0032\373\001"
     "\n\016RemoteFunction\0221\n\taddTwoNum\022\022.func_cal"
     "l.Numbers\032\016.func_call.ans\"\000\0224\n\nplusTwoNu"
     "m\022\022.func_call.Numbers\032\016.func_call.ans\"\0000"
@@ -259,27 +259,27 @@ const ::_pbi::TcParseTable<2, 3, 0, 0, 2> Numbers::_table_ = {
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
     {::_pbi::TcParser::MiniParse, {}},
-    // int32 optTimes = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Numbers, _impl_.opttimes_), 63>(),
+    // int64 optTimes = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(Numbers, _impl_.opttimes_), 63>(),
      {8, 63, 0, PROTOBUF_FIELD_OFFSET(Numbers, _impl_.opttimes_)}},
-    // int32 num1 = 2;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Numbers, _impl_.num1_), 63>(),
+    // int64 num1 = 2;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(Numbers, _impl_.num1_), 63>(),
      {16, 63, 0, PROTOBUF_FIELD_OFFSET(Numbers, _impl_.num1_)}},
-    // int32 num2 = 3;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(Numbers, _impl_.num2_), 63>(),
+    // int64 num2 = 3;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(Numbers, _impl_.num2_), 63>(),
      {24, 63, 0, PROTOBUF_FIELD_OFFSET(Numbers, _impl_.num2_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int32 optTimes = 1;
+    // int64 optTimes = 1;
     {PROTOBUF_FIELD_OFFSET(Numbers, _impl_.opttimes_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // int32 num1 = 2;
+    (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
+    // int64 num1 = 2;
     {PROTOBUF_FIELD_OFFSET(Numbers, _impl_.num1_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // int32 num2 = 3;
+    (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
+    // int64 num2 = 3;
     {PROTOBUF_FIELD_OFFSET(Numbers, _impl_.num2_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
+    (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
   }},
   // no aux_entries
   {{
@@ -293,24 +293,24 @@ const ::_pbi::TcParseTable<2, 3, 0, 0, 2> Numbers::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int32 optTimes = 1;
+  // int64 optTimes = 1;
   if (this->_internal_opttimes() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<1>(
+        WriteInt64ToArrayWithField<1>(
             stream, this->_internal_opttimes(), target);
   }
 
-  // int32 num1 = 2;
+  // int64 num1 = 2;
   if (this->_internal_num1() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<2>(
+        WriteInt64ToArrayWithField<2>(
             stream, this->_internal_num1(), target);
   }
 
-  // int32 num2 = 3;
+  // int64 num2 = 3;
   if (this->_internal_num2() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<3>(
+        WriteInt64ToArrayWithField<3>(
             stream, this->_internal_num2(), target);
   }
 
@@ -331,21 +331,21 @@ const ::_pbi::TcParseTable<2, 3, 0, 0, 2> Numbers::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // int32 optTimes = 1;
+  // int64 optTimes = 1;
   if (this->_internal_opttimes() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
         this->_internal_opttimes());
   }
 
-  // int32 num1 = 2;
+  // int64 num1 = 2;
   if (this->_internal_num1() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
         this->_internal_num1());
   }
 
-  // int32 num2 = 3;
+  // int64 num2 = 3;
   if (this->_internal_num2() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
         this->_internal_num2());
   }
 
@@ -452,7 +452,7 @@ PROTOBUF_NOINLINE void ans::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.result_ = 0;
+  _impl_.result_ = ::int64_t{0};
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
 
@@ -478,15 +478,15 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> ans::_table_ = {
     &_ans_default_instance_._instance,
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
-    // int32 result = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(ans, _impl_.result_), 63>(),
+    // int64 result = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(ans, _impl_.result_), 63>(),
      {8, 63, 0, PROTOBUF_FIELD_OFFSET(ans, _impl_.result_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int32 result = 1;
+    // int64 result = 1;
     {PROTOBUF_FIELD_OFFSET(ans, _impl_.result_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
+    (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
   }},
   // no aux_entries
   {{
@@ -500,10 +500,10 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> ans::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int32 result = 1;
+  // int64 result = 1;
   if (this->_internal_result() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<1>(
+        WriteInt64ToArrayWithField<1>(
             stream, this->_internal_result(), target);
   }
 
@@ -524,9 +524,9 @@ const ::_pbi::TcParseTable<0, 1, 0, 0, 2> ans::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // int32 result = 1;
+  // int64 result = 1;
   if (this->_internal_result() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
         this->_internal_result());
   }
 
@@ -655,21 +655,21 @@ const ::_pbi::TcParseTable<1, 2, 0, 0, 2> SquareTwoNum::_table_ = {
     &_SquareTwoNum_default_instance_._instance,
     ::_pbi::TcParser::GenericFallback,  // fallback
   }, {{
-    // int32 num2 = 2;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(SquareTwoNum, _impl_.num2_), 63>(),
+    // int64 num2 = 2;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(SquareTwoNum, _impl_.num2_), 63>(),
      {16, 63, 0, PROTOBUF_FIELD_OFFSET(SquareTwoNum, _impl_.num2_)}},
-    // int32 num1 = 1;
-    {::_pbi::TcParser::SingularVarintNoZag1<::uint32_t, offsetof(SquareTwoNum, _impl_.num1_), 63>(),
+    // int64 num1 = 1;
+    {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(SquareTwoNum, _impl_.num1_), 63>(),
      {8, 63, 0, PROTOBUF_FIELD_OFFSET(SquareTwoNum, _impl_.num1_)}},
   }}, {{
     65535, 65535
   }}, {{
-    // int32 num1 = 1;
+    // int64 num1 = 1;
     {PROTOBUF_FIELD_OFFSET(SquareTwoNum, _impl_.num1_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
-    // int32 num2 = 2;
+    (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
+    // int64 num2 = 2;
     {PROTOBUF_FIELD_OFFSET(SquareTwoNum, _impl_.num2_), 0, 0,
-    (0 | ::_fl::kFcSingular | ::_fl::kInt32)},
+    (0 | ::_fl::kFcSingular | ::_fl::kInt64)},
   }},
   // no aux_entries
   {{
@@ -683,17 +683,17 @@ const ::_pbi::TcParseTable<1, 2, 0, 0, 2> SquareTwoNum::_table_ = {
   ::uint32_t cached_has_bits = 0;
   (void)cached_has_bits;
 
-  // int32 num1 = 1;
+  // int64 num1 = 1;
   if (this->_internal_num1() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<1>(
+        WriteInt64ToArrayWithField<1>(
             stream, this->_internal_num1(), target);
   }
 
-  // int32 num2 = 2;
+  // int64 num2 = 2;
   if (this->_internal_num2() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::
-        WriteInt32ToArrayWithField<2>(
+        WriteInt64ToArrayWithField<2>(
             stream, this->_internal_num2(), target);
   }
 
@@ -714,15 +714,15 @@ const ::_pbi::TcParseTable<1, 2, 0, 0, 2> SquareTwoNum::_table_ = {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // int32 num1 = 1;
+  // int64 num1 = 1;
   if (this->_internal_num1() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
         this->_internal_num1());
   }
 
-  // int32 num2 = 2;
+  // int64 num2 = 2;
   if (this->_internal_num2() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(
         this->_internal_num2());
   }
 

@@ -1,3 +1,5 @@
 D:/code/grpc_demo/func_call/build/CMakeFiles/rf_grpc_proto.dir
+D:/code/grpc_demo/func_call/build/CMakeFiles/func_call_client.dir
+D:/code/grpc_demo/func_call/build/CMakeFiles/func_call_server.dir
 D:/code/grpc_demo/func_call/build/CMakeFiles/edit_cache.dir
 D:/code/grpc_demo/func_call/build/CMakeFiles/rebuild_cache.dir

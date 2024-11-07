@@ -70,18 +70,18 @@ target_link_libraries(rf_grpc_proto
   ${_GRPC_GRPCPP}
   ${_PROTOBUF_LIBPROTOBUF})
 
-# # 生成可执行文件
-# foreach(_target
-#   func_call_client func_call_server)
-#   add_executable(${_target}
-#     "${_target}.cpp")
-#   target_link_libraries(${_target}
-#     rf_grpc_proto
-#     absl::flags_parse
-#     absl::absl_log
-#     absl::log_initialize
-#     absl::log_globals
-#     ${_REFLECTION}
-#     ${_GRPC_GRPCPP}
-#     ${_PROTOBUF_LIBPROTOBUF})
-# endforeach()
+# 生成可执行文件
+foreach(_target
+  func_call_client func_call_server)
+  add_executable(${_target}
+    "${_target}.cpp")
+  target_link_libraries(${_target}
+    rf_grpc_proto
+    absl::flags_parse
+    absl::absl_log
+    absl::log_initialize
+    absl::log_globals
+    ${_REFLECTION}
+    ${_GRPC_GRPCPP}
+    ${_PROTOBUF_LIBPROTOBUF})
+endforeach()

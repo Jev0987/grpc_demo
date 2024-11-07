@@ -4,7 +4,7 @@
  * @version: 
  * @Date: 2024-10-30
  * @LastEditors: jev
- * @LastEditTime: 2024-10-30
+ * @LastEditTime: 2024-10-31
  */
 syntax = "proto3";
 
@@ -27,18 +27,18 @@ service RemoteFunction {
 
 // 普通的数字
 message Numbers {
-    int32 num1 = 2;
-    int32 num2 = 3;
-    int32 optTimes = 1;  // 操作次数
+    int64 num1 = 2;
+    int64 num2 = 3;
+    int64 optTimes = 1;  // 操作次数
 }
 
 // 结果
 message ans {
-    int32 result = 1;
+    int64 result = 1;
 }
 
-// 数字进行平方
+// 数字进行平方结果
 message SquareTwoNum {
-    int32 num1 = 1;
-    int32 num2 = 2;
+    int64 num1 = 1;
+    int64 num2 = 2;
 }

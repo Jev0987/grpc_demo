@@ -212,14 +212,14 @@ class ans final :
   enum : int {
     kResultFieldNumber = 1,
   };
-  // int32 result = 1;
+  // int64 result = 1;
   void clear_result() ;
-  ::int32_t result() const;
-  void set_result(::int32_t value);
+  ::int64_t result() const;
+  void set_result(::int64_t value);
 
   private:
-  ::int32_t _internal_result() const;
-  void _internal_set_result(::int32_t value);
+  ::int64_t _internal_result() const;
+  void _internal_set_result(::int64_t value);
 
   public:
   // @@protoc_insertion_point(class_scope:func_call.ans)
@@ -245,7 +245,7 @@ class ans final :
                               ::google::protobuf::Arena* arena);
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
-    ::int32_t result_;
+    ::int64_t result_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -388,24 +388,24 @@ class SquareTwoNum final :
     kNum1FieldNumber = 1,
     kNum2FieldNumber = 2,
   };
-  // int32 num1 = 1;
+  // int64 num1 = 1;
   void clear_num1() ;
-  ::int32_t num1() const;
-  void set_num1(::int32_t value);
+  ::int64_t num1() const;
+  void set_num1(::int64_t value);
 
   private:
-  ::int32_t _internal_num1() const;
-  void _internal_set_num1(::int32_t value);
+  ::int64_t _internal_num1() const;
+  void _internal_set_num1(::int64_t value);
 
   public:
-  // int32 num2 = 2;
+  // int64 num2 = 2;
   void clear_num2() ;
-  ::int32_t num2() const;
-  void set_num2(::int32_t value);
+  ::int64_t num2() const;
+  void set_num2(::int64_t value);
 
   private:
-  ::int32_t _internal_num2() const;
-  void _internal_set_num2(::int32_t value);
+  ::int64_t _internal_num2() const;
+  void _internal_set_num2(::int64_t value);
 
   public:
   // @@protoc_insertion_point(class_scope:func_call.SquareTwoNum)
@@ -431,8 +431,8 @@ class SquareTwoNum final :
                               ::google::protobuf::Arena* arena);
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
-    ::int32_t num1_;
-    ::int32_t num2_;
+    ::int64_t num1_;
+    ::int64_t num2_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -576,34 +576,34 @@ class Numbers final :
     kNum1FieldNumber = 2,
     kNum2FieldNumber = 3,
   };
-  // int32 optTimes = 1;
+  // int64 optTimes = 1;
   void clear_opttimes() ;
-  ::int32_t opttimes() const;
-  void set_opttimes(::int32_t value);
+  ::int64_t opttimes() const;
+  void set_opttimes(::int64_t value);
 
   private:
-  ::int32_t _internal_opttimes() const;
-  void _internal_set_opttimes(::int32_t value);
+  ::int64_t _internal_opttimes() const;
+  void _internal_set_opttimes(::int64_t value);
 
   public:
-  // int32 num1 = 2;
+  // int64 num1 = 2;
   void clear_num1() ;
-  ::int32_t num1() const;
-  void set_num1(::int32_t value);
+  ::int64_t num1() const;
+  void set_num1(::int64_t value);
 
   private:
-  ::int32_t _internal_num1() const;
-  void _internal_set_num1(::int32_t value);
+  ::int64_t _internal_num1() const;
+  void _internal_set_num1(::int64_t value);
 
   public:
-  // int32 num2 = 3;
+  // int64 num2 = 3;
   void clear_num2() ;
-  ::int32_t num2() const;
-  void set_num2(::int32_t value);
+  ::int64_t num2() const;
+  void set_num2(::int64_t value);
 
   private:
-  ::int32_t _internal_num2() const;
-  void _internal_set_num2(::int32_t value);
+  ::int64_t _internal_num2() const;
+  void _internal_set_num2(::int64_t value);
 
   public:
   // @@protoc_insertion_point(class_scope:func_call.Numbers)
@@ -629,9 +629,9 @@ class Numbers final :
                               ::google::protobuf::Arena* arena);
         inline explicit Impl_(::google::protobuf::internal::InternalVisibility visibility,
                               ::google::protobuf::Arena* arena, const Impl_& from);
-    ::int32_t opttimes_;
-    ::int32_t num1_;
-    ::int32_t num2_;
+    ::int64_t opttimes_;
+    ::int64_t num1_;
+    ::int64_t num2_;
     mutable ::google::protobuf::internal::CachedSize _cached_size_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -655,70 +655,70 @@ class Numbers final :
 
 // Numbers
 
-// int32 num1 = 2;
+// int64 num1 = 2;
 inline void Numbers::clear_num1() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.num1_ = 0;
+  _impl_.num1_ = ::int64_t{0};
 }
-inline ::int32_t Numbers::num1() const {
+inline ::int64_t Numbers::num1() const {
   // @@protoc_insertion_point(field_get:func_call.Numbers.num1)
   return _internal_num1();
 }
-inline void Numbers::set_num1(::int32_t value) {
+inline void Numbers::set_num1(::int64_t value) {
   _internal_set_num1(value);
   // @@protoc_insertion_point(field_set:func_call.Numbers.num1)
 }
-inline ::int32_t Numbers::_internal_num1() const {
+inline ::int64_t Numbers::_internal_num1() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
   return _impl_.num1_;
 }
-inline void Numbers::_internal_set_num1(::int32_t value) {
+inline void Numbers::_internal_set_num1(::int64_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
   _impl_.num1_ = value;
 }
 
-// int32 num2 = 3;
+// int64 num2 = 3;
 inline void Numbers::clear_num2() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.num2_ = 0;
+  _impl_.num2_ = ::int64_t{0};
 }
-inline ::int32_t Numbers::num2() const {
+inline ::int64_t Numbers::num2() const {
   // @@protoc_insertion_point(field_get:func_call.Numbers.num2)
   return _internal_num2();
 }
-inline void Numbers::set_num2(::int32_t value) {
+inline void Numbers::set_num2(::int64_t value) {
   _internal_set_num2(value);
   // @@protoc_insertion_point(field_set:func_call.Numbers.num2)
 }
-inline ::int32_t Numbers::_internal_num2() const {
+inline ::int64_t Numbers::_internal_num2() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
   return _impl_.num2_;
 }
-inline void Numbers::_internal_set_num2(::int32_t value) {
+inline void Numbers::_internal_set_num2(::int64_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
   _impl_.num2_ = value;
 }
 
-// int32 optTimes = 1;
+// int64 optTimes = 1;
 inline void Numbers::clear_opttimes() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.opttimes_ = 0;
+  _impl_.opttimes_ = ::int64_t{0};
 }
-inline ::int32_t Numbers::opttimes() const {
+inline ::int64_t Numbers::opttimes() const {
   // @@protoc_insertion_point(field_get:func_call.Numbers.optTimes)
   return _internal_opttimes();
 }
-inline void Numbers::set_opttimes(::int32_t value) {
+inline void Numbers::set_opttimes(::int64_t value) {
   _internal_set_opttimes(value);
   // @@protoc_insertion_point(field_set:func_call.Numbers.optTimes)
 }
-inline ::int32_t Numbers::_internal_opttimes() const {
+inline ::int64_t Numbers::_internal_opttimes() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
   return _impl_.opttimes_;
 }
-inline void Numbers::_internal_set_opttimes(::int32_t value) {
+inline void Numbers::_internal_set_opttimes(::int64_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
   _impl_.opttimes_ = value;
@@ -728,24 +728,24 @@ inline void Numbers::_internal_set_opttimes(::int32_t value) {
 
 // ans
 
-// int32 result = 1;
+// int64 result = 1;
 inline void ans::clear_result() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.result_ = 0;
+  _impl_.result_ = ::int64_t{0};
 }
-inline ::int32_t ans::result() const {
+inline ::int64_t ans::result() const {
   // @@protoc_insertion_point(field_get:func_call.ans.result)
   return _internal_result();
 }
-inline void ans::set_result(::int32_t value) {
+inline void ans::set_result(::int64_t value) {
   _internal_set_result(value);
   // @@protoc_insertion_point(field_set:func_call.ans.result)
 }
-inline ::int32_t ans::_internal_result() const {
+inline ::int64_t ans::_internal_result() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
   return _impl_.result_;
 }
-inline void ans::_internal_set_result(::int32_t value) {
+inline void ans::_internal_set_result(::int64_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
   _impl_.result_ = value;
@@ -755,47 +755,47 @@ inline void ans::_internal_set_result(::int32_t value) {
 
 // SquareTwoNum
 
-// int32 num1 = 1;
+// int64 num1 = 1;
 inline void SquareTwoNum::clear_num1() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.num1_ = 0;
+  _impl_.num1_ = ::int64_t{0};
 }
-inline ::int32_t SquareTwoNum::num1() const {
+inline ::int64_t SquareTwoNum::num1() const {
   // @@protoc_insertion_point(field_get:func_call.SquareTwoNum.num1)
   return _internal_num1();
 }
-inline void SquareTwoNum::set_num1(::int32_t value) {
+inline void SquareTwoNum::set_num1(::int64_t value) {
   _internal_set_num1(value);
   // @@protoc_insertion_point(field_set:func_call.SquareTwoNum.num1)
 }
-inline ::int32_t SquareTwoNum::_internal_num1() const {
+inline ::int64_t SquareTwoNum::_internal_num1() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
   return _impl_.num1_;
 }
-inline void SquareTwoNum::_internal_set_num1(::int32_t value) {
+inline void SquareTwoNum::_internal_set_num1(::int64_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
   _impl_.num1_ = value;
 }
 
-// int32 num2 = 2;
+// int64 num2 = 2;
 inline void SquareTwoNum::clear_num2() {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
-  _impl_.num2_ = 0;
+  _impl_.num2_ = ::int64_t{0};
 }
-inline ::int32_t SquareTwoNum::num2() const {
+inline ::int64_t SquareTwoNum::num2() const {
   // @@protoc_insertion_point(field_get:func_call.SquareTwoNum.num2)
   return _internal_num2();
 }
-inline void SquareTwoNum::set_num2(::int32_t value) {
+inline void SquareTwoNum::set_num2(::int64_t value) {
   _internal_set_num2(value);
   // @@protoc_insertion_point(field_set:func_call.SquareTwoNum.num2)
 }
-inline ::int32_t SquareTwoNum::_internal_num2() const {
+inline ::int64_t SquareTwoNum::_internal_num2() const {
   PROTOBUF_TSAN_READ(&_impl_._tsan_detect_race);
   return _impl_.num2_;
 }
-inline void SquareTwoNum::_internal_set_num2(::int32_t value) {
+inline void SquareTwoNum::_internal_set_num2(::int64_t value) {
   PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ;
   _impl_.num2_ = value;

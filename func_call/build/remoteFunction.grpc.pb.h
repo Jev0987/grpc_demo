@@ -8,7 +8,7 @@
 // @version: 
 // @Date: 2024-10-30
 // @LastEditors: jev
-// @LastEditTime: 2024-10-30
+// @LastEditTime: 2024-10-31
 #ifndef GRPC_remoteFunction_2eproto__INCLUDED
 #define GRPC_remoteFunction_2eproto__INCLUDED
 

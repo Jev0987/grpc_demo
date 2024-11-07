@@ -128,6 +128,80 @@ rf_grpc_proto/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\rf_grpc_proto.dir\build.make CMakeFiles/rf_grpc_proto.dir/build
 .PHONY : rf_grpc_proto/fast
 
+#=============================================================================
+# Target rules for targets named func_call_client
+
+# Build rule for target.
+func_call_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 func_call_client
+.PHONY : func_call_client
+
+# fast build rule for target.
+func_call_client/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\func_call_client.dir\build.make CMakeFiles/func_call_client.dir/build
+.PHONY : func_call_client/fast
+
+#=============================================================================
+# Target rules for targets named func_call_server
+
+# Build rule for target.
+func_call_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 func_call_server
+.PHONY : func_call_server
+
+# fast build rule for target.
+func_call_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\func_call_server.dir\build.make CMakeFiles/func_call_server.dir/build
+.PHONY : func_call_server/fast
+
+func_call_client.obj: func_call_client.cpp.obj
+.PHONY : func_call_client.obj
+
+# target to build an object file
+func_call_client.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\func_call_client.dir\build.make CMakeFiles/func_call_client.dir/func_call_client.cpp.obj
+.PHONY : func_call_client.cpp.obj
+
+func_call_client.i: func_call_client.cpp.i
+.PHONY : func_call_client.i
+
+# target to preprocess a source file
+func_call_client.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\func_call_client.dir\build.make CMakeFiles/func_call_client.dir/func_call_client.cpp.i
+.PHONY : func_call_client.cpp.i
+
+func_call_client.s: func_call_client.cpp.s
+.PHONY : func_call_client.s
+
+# target to generate assembly for a file
+func_call_client.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\func_call_client.dir\build.make CMakeFiles/func_call_client.dir/func_call_client.cpp.s
+.PHONY : func_call_client.cpp.s
+
+func_call_server.obj: func_call_server.cpp.obj
+.PHONY : func_call_server.obj
+
+# target to build an object file
+func_call_server.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\func_call_server.dir\build.make CMakeFiles/func_call_server.dir/func_call_server.cpp.obj
+.PHONY : func_call_server.cpp.obj
+
+func_call_server.i: func_call_server.cpp.i
+.PHONY : func_call_server.i
+
+# target to preprocess a source file
+func_call_server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\func_call_server.dir\build.make CMakeFiles/func_call_server.dir/func_call_server.cpp.i
+.PHONY : func_call_server.cpp.i
+
+func_call_server.s: func_call_server.cpp.s
+.PHONY : func_call_server.s
+
+# target to generate assembly for a file
+func_call_server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\func_call_server.dir\build.make CMakeFiles/func_call_server.dir/func_call_server.cpp.s
+.PHONY : func_call_server.cpp.s
+
 remoteFunction.grpc.pb.obj: remoteFunction.grpc.pb.cc.obj
 .PHONY : remoteFunction.grpc.pb.obj
 
@@ -184,7 +258,15 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... func_call_client
+	@echo ... func_call_server
 	@echo ... rf_grpc_proto
+	@echo ... func_call_client.obj
+	@echo ... func_call_client.i
+	@echo ... func_call_client.s
+	@echo ... func_call_server.obj
+	@echo ... func_call_server.i
+	@echo ... func_call_server.s
 	@echo ... remoteFunction.grpc.pb.obj
 	@echo ... remoteFunction.grpc.pb.i
 	@echo ... remoteFunction.grpc.pb.s

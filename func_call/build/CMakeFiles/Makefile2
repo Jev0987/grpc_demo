@@ -63,6 +63,8 @@ CMAKE_BINARY_DIR = D:\code\grpc_demo\func_call\build
 
 # The main recursive "all" target.
 all: CMakeFiles/rf_grpc_proto.dir/all
+all: CMakeFiles/func_call_client.dir/all
+all: CMakeFiles/func_call_server.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,6 +73,8 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/rf_grpc_proto.dir/clean
+clean: CMakeFiles/func_call_client.dir/clean
+clean: CMakeFiles/func_call_server.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -80,7 +84,7 @@ clean: CMakeFiles/rf_grpc_proto.dir/clean
 CMakeFiles/rf_grpc_proto.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\rf_grpc_proto.dir\build.make CMakeFiles/rf_grpc_proto.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\rf_grpc_proto.dir\build.make CMakeFiles/rf_grpc_proto.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\code\grpc_demo\func_call\build\CMakeFiles --progress-num=1,2,3,4 "Built target rf_grpc_proto"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\code\grpc_demo\func_call\build\CMakeFiles --progress-num=5,6,7,8 "Built target rf_grpc_proto"
 .PHONY : CMakeFiles/rf_grpc_proto.dir/all
 
 # Build rule for subdir invocation for target.
@@ -98,6 +102,58 @@ rf_grpc_proto: CMakeFiles/rf_grpc_proto.dir/rule
 CMakeFiles/rf_grpc_proto.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\rf_grpc_proto.dir\build.make CMakeFiles/rf_grpc_proto.dir/clean
 .PHONY : CMakeFiles/rf_grpc_proto.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/func_call_client.dir
+
+# All Build rule for target.
+CMakeFiles/func_call_client.dir/all: CMakeFiles/rf_grpc_proto.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\func_call_client.dir\build.make CMakeFiles/func_call_client.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\func_call_client.dir\build.make CMakeFiles/func_call_client.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\code\grpc_demo\func_call\build\CMakeFiles --progress-num=1,2 "Built target func_call_client"
+.PHONY : CMakeFiles/func_call_client.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/func_call_client.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\code\grpc_demo\func_call\build\CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/func_call_client.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\code\grpc_demo\func_call\build\CMakeFiles 0
+.PHONY : CMakeFiles/func_call_client.dir/rule
+
+# Convenience name for target.
+func_call_client: CMakeFiles/func_call_client.dir/rule
+.PHONY : func_call_client
+
+# clean rule for target.
+CMakeFiles/func_call_client.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\func_call_client.dir\build.make CMakeFiles/func_call_client.dir/clean
+.PHONY : CMakeFiles/func_call_client.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/func_call_server.dir
+
+# All Build rule for target.
+CMakeFiles/func_call_server.dir/all: CMakeFiles/rf_grpc_proto.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\func_call_server.dir\build.make CMakeFiles/func_call_server.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\func_call_server.dir\build.make CMakeFiles/func_call_server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\code\grpc_demo\func_call\build\CMakeFiles --progress-num=3,4 "Built target func_call_server"
+.PHONY : CMakeFiles/func_call_server.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/func_call_server.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\code\grpc_demo\func_call\build\CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/func_call_server.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\code\grpc_demo\func_call\build\CMakeFiles 0
+.PHONY : CMakeFiles/func_call_server.dir/rule
+
+# Convenience name for target.
+func_call_server: CMakeFiles/func_call_server.dir/rule
+.PHONY : func_call_server
+
+# clean rule for target.
+CMakeFiles/func_call_server.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\func_call_server.dir\build.make CMakeFiles/func_call_server.dir/clean
+.PHONY : CMakeFiles/func_call_server.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
