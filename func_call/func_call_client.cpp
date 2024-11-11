@@ -4,7 +4,7 @@
  * @version: 
  * @Date: 2024-10-30
  * @LastEditors: jev
- * @LastEditTime: 2024-11-07
+ * @LastEditTime: 2024-11-11
  */
 #include <grpcpp/grpcpp.h>
 #include <iostream>
@@ -155,7 +155,7 @@ int main(int argc, char** argv) {
     int n2 = std::stoi(absl::GetFlag(FLAGS_n2));
     int opts = std::stoi(absl::GetFlag(FLAGS_opts));
 
-    TestClient client(grpc::CreateChannel("localhost:50051", grpc::InsecureChannelCredentials()));
+    TestClient client(grpc::CreateChannel("localhost:9872", grpc::InsecureChannelCredentials()));
 
     int result = client.addTwoNum(n1, n2, opts);
     std::cout << "add two number result: " << result << std::endl;

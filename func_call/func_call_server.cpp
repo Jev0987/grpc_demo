@@ -4,7 +4,7 @@
  * @version: 
  * @Date: 2024-10-30
  * @LastEditors: jev
- * @LastEditTime: 2024-10-31
+ * @LastEditTime: 2024-11-09
  */
 
 #include <grpcpp/grpcpp.h>
@@ -35,17 +35,19 @@ public:
     // 两个数字相加opttimes次, 返回一个结果
     Status addTwoNum(ServerContext* context, const Numbers* request, ans* response) override {
         int result = 0;
+        std::cout << "num1: " << request->num1() << ", num2: " << request->num2() << ", opttimes: " << request->opttimes() << std::endl;
         for (int i = 0; i < request->opttimes(); ++i) {
-            result += request->num1() + request->num2();
+            result += (request->num1() + request->num2());
         }
         response->set_result(result);
         return Status::OK;
     }
+    
     // 两个数字相加opttimes次, 返回每次相加的结果
     Status plusTwoNum(ServerContext* context, const Numbers* request, ServerWriter<ans>* writer) override {
         int result = 0;
         for (int i = 0; i < request->opttimes(); ++i) {
-            result += request->num1() + request->num2();
+            result += (request->num1() + request->num2());
             ans ans_;
             ans_.set_result(result);
             writer->Write(ans_);
@@ -60,14 +62,14 @@ public:
         int result1 = 0;
         int result2 = 0;
         while (reader->Read(&numbers)) {
-            result1 += numbers.num1() * numbers.num1();
-            result2 += numbers.num2() * numbers.num2();
+            result1 += (numbers.num1() * numbers.num1());
+            result2 += (numbers.num2() * numbers.num2());
         }
         response->set_num1(result1);
         response->set_num2(result2);
         return Status::OK;
     }
-
+    
     // 接受流数据，返回每次平方的结果
     Status plusTwoNum3(ServerContext* context, ServerReaderWriter<SquareTwoNum, Numbers> *stream) override {
         Numbers numbers;
@@ -98,4 +100,4 @@ int main(int argv, char** argc) {
     absl::ParseCommandLine(argv, argc);
     RunServer();
     return 0;
-}
+}   
